@@ -1,5 +1,8 @@
 pipeline{
   agent any
+  parameters{
+    choice(name:'scriptName', choices: ['regressiontest','firstTestCase','recordDashboardTest','doubleDataBindingTest', 'multipleTests'],description:'Choices for running the different tests')
+  }
 
   stages{
     stage('Build'){
@@ -9,7 +12,7 @@ pipeline{
     }
     stage('Test'){
       steps{
-        bat "npm run firstTestCase"
+        bat "npm run ${scriptName}"
       }
     }
     stage('Deploy'){
