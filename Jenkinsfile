@@ -12,7 +12,7 @@ pipeline{
     }
     stage('Test'){
       steps{
-        bat label: '', script: 'npm run "${scriptName}"'
+        bat "npm run ${scriptName}"
       }
     }
     stage('Deploy'){
