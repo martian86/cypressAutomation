@@ -1,7 +1,7 @@
 pipeline{
   agent any
   parameters{
-    choice(name:'scriptName', choices: ['regressiontest1','firstTestCase','recordDashboardTest','doubleDataBindingTest', 'multipleTests'],description:'Choices for running the different tests')
+    choice(name:'scriptName', choices: ['regressiontest','firstTestCase','recordDashboardTest','doubleDataBindingTest', 'multipleTests'],description:'Choices for running the different tests')
   }
 
   stages{
