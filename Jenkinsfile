@@ -20,7 +20,7 @@ pipeline{
   }
   post{
     success{
-      echo 'Execution is successful. Jai Shri Ram!!!!!!'
+      echo 'Execution is successful. Jai Shri Ram!'
     }
   }
 }
