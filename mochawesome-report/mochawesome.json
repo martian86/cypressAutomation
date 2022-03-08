@@ -1,0 +1,160 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 2,
+    "failures": -2,
+    "start": "2022-03-07T22:03:14.047Z",
+    "end": "2022-03-07T22:03:14.152Z",
+    "duration": 105,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 2,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "27c0d170-064d-4646-be82-ad04e40bd7da",
+      "title": "",
+      "fullFile": "cypress/integration/fixturesTest2.js",
+      "file": "cypress/integration/fixturesTest2.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "195171d8-72b3-45ea-901e-73662afc951e",
+          "title": "Test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "First test case without fixtures",
+              "fullTitle": "Test suite First test case without fixtures",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "bae0870e-5fb0-453f-b125-1fc8513e7733",
+              "parentUUID": "195171d8-72b3-45ea-901e-73662afc951e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Second test case using fixtures",
+              "fullTitle": "Test suite Second test case using fixtures",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "9134576a-0370-42de-b98e-11ca35c2d5f5",
+              "parentUUID": "195171d8-72b3-45ea-901e-73662afc951e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Another fixtures test case using imports",
+              "fullTitle": "Test suite Another fixtures test case using imports",
+              "timedOut": null,
+              "duration": 9,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log(_users.default[0].name);",
+              "err": {},
+              "uuid": "9436943c-5e78-4071-a879-ec126d665583",
+              "parentUUID": "195171d8-72b3-45ea-901e-73662afc951e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Another fixtures test case using cy.fixtures()",
+              "fullTitle": "Test suite Another fixtures test case using cy.fixtures()",
+              "timedOut": null,
+              "duration": 29,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('users.json').then(function ($element) {\n  cy.log($element[0].name);\n});",
+              "err": {},
+              "uuid": "0679d5fe-9942-44c9-9b03-e17ae24cc389",
+              "parentUUID": "195171d8-72b3-45ea-901e-73662afc951e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9436943c-5e78-4071-a879-ec126d665583",
+            "0679d5fe-9942-44c9-9b03-e17ae24cc389"
+          ],
+          "failures": [],
+          "pending": [
+            "bae0870e-5fb0-453f-b125-1fc8513e7733",
+            "9134576a-0370-42de-b98e-11ca35c2d5f5"
+          ],
+          "skipped": [],
+          "duration": 38,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "mochaFile": "./mochawesome-report/results/my-test-output-[hash].xml"
+      },
+      "version": "6.0.1"
+    }
+  }
+}
