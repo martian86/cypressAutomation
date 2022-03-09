@@ -1,5 +1,7 @@
 pipeline{
-  agent any
+  agent{
+    docker {image 'cypress/included:9.1.1'}
+  }
 
   stages{
     stage('Build'){
