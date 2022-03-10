@@ -9,7 +9,7 @@ pipeline{
     }
     stage('Test'){
       steps{
-        bat "docker run -it -v \"%cd%\":\"/e2e\" -w /e2e cypress/included:9.1.1 --spec cypress/integration/firstTestCase.js"
+        bat "docker run -v \"%cd%\":\"/e2e\" -w /e2e cypress/included:9.1.1 --spec cypress/integration/firstTestCase.js"
       }
     }
     stage('Deploy'){
