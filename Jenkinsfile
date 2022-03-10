@@ -1,7 +1,5 @@
 pipeline{
-  agent{
-    docker {image 'cypress/included:9.1.1'}
-  }
+  agent any
 
   stages{
     stage('Build'){
@@ -11,7 +9,7 @@ pipeline{
     }
     stage('Test'){
       steps{
-        bat "npm run firstTestCase"
+        bat "docker run -it -v \"%cd%\":\"/e2e\" -w /e2e cypress/included:9.1.1 --spec cypress/integration/firstTestCase.js"
       }
     }
     stage('Deploy'){
