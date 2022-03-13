@@ -1,6 +1,10 @@
 pipeline{
   agent any
 
+  parameters{
+    choice(name:'scriptName', choices:['pageObjectsTest','regressiontest','firstTestCase'])
+  }
+
   stages{
     stage('Build'){
       steps{
@@ -10,6 +14,8 @@ pipeline{
     stage('Test'){
       steps{
         bat "docker run -v \"%cd%\":\"/e2e\" -w /e2e cypress/included:9.1.1 --spec cypress/integration/firstTestCase.js"
+
+        bat "npm run ${scriptName}"
       }
     }
     stage('Deploy'){
