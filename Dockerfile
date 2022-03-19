@@ -1,4 +1,4 @@
-FROM cypress/browsers:node16.5.0-chrome94-ff93
+FROM cypress/included:9.1.1
 RUN mkdir /my-cypress-project
 WORKDIR /my-cypress-project
 COPY ./Jenkinsfile .
