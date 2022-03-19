@@ -2,7 +2,7 @@ pipeline{
   agent any
 
   parameters{
-    choice(name:'scriptName', choices:['pageObjectsTest','regressiontest','firstTestCase'])
+    choice(name:'scriptName', choices:['pageObjectsTest','regressiontest','firstTestCase','dockerTests'])
   }
 
   stages{
