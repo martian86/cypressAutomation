@@ -5,7 +5,7 @@ pipeline{
     stage('Build'){
       steps{
         echo 'Building the project'
-        bat 'docker build -t my-cypress-image:1.1.0'
+        bat 'docker build -t my-cypress-image:1.1.0 .'
       }
     }
     stage('Test'){
