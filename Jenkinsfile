@@ -9,13 +9,12 @@ pipeline{
     stage('Build'){
       steps{
         echo 'Building the project'
+        sh 'docker build -t my-cypress-image:1.1.0'
       }
     }
     stage('Test'){
       steps{
-        bat "docker run -v \"%cd%\":\"/e2e\" -w /e2e cypress/included:9.1.1 --spec cypress/integration/firstTestCase.js"
-
-        bat "npm run ${scriptName}"
+        sh 'docker run my-cypress-image:1.1.0'
       }
     }
     stage('Deploy'){
