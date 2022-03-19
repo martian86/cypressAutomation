@@ -5,5 +5,5 @@ COPY ./Jenkinsfile .
 COPY ./package.json .
 COPY ./package-lock.json .
 COPY ./cypress ./cypress
-RUN ["npm","ci"]
-ENTRYPOINT ["./node_modules/.bin/cypress", "run","--spec","cypress/integration/regression/*"]
+RUN ["npx","cypress","run"]
+ENTRYPOINT ["--spec","cypress/integration/regression/*"]
