@@ -164,15 +164,15 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "testCommand":".\\node_modules\\.bin\\cypress run",
+    "testCommand":"./node_modules/.bin/cypress run",
     "common":"npx cypress run",
-    "pageObjectsTest":"npx cypress run --spec cypress\\integration\\PageObjectsModelTest.js --headed --browser chrome",
-    "doubleDataBindingTest":"npm run common -- --spec cypress\\integration\\testDoubleDataBinding.js --headed --browser chrome",
-    "recordDashboardTest":"npm run common -- --spec cypress\\integration\\PageObjectsModelTest.js --record --key 71c256ba-b5cf-4f59-a8ae-fb4a705be76a",
-    "regressiontest":"npm run common -- --spec cypress\\integration\\regression\\*",
-    "firstTestCase":".\\node_modules\\.bin\\cypress run --spec cypress\\integration\\firstTestCase.js",
-    "multipleTests":"npm run testCommand -- --spec cypress\\integration\\fixturesTest.js,cypress\\integration\\fixturesTest2.js",
-    "parallelTests":"npm run testCommand -- --spec cypress\\integration\\fixturesTest.js,cypress\\integration\\fixturesTest2.js --record --key 71c256ba-b5cf-4f59-a8ae-fb4a705be76a --parallel"
+    "pageObjectsTest":"npx cypress run --spec cypress/integration/PageObjectsModelTest.js --headed --browser chrome",
+    "doubleDataBindingTest":"npm run common -- --spec cypress/integration/testDoubleDataBinding.js --headed --browser chrome",
+    "recordDashboardTest":"npm run common -- --spec cypress/integration/PageObjectsModelTest.js --record --key 71c256ba-b5cf-4f59-a8ae-fb4a705be76a",
+    "regressiontest":"npm run common -- --spec cypress/integration/regression/*",
+    "firstTestCase":"./node_modules/.bin/cypress run --spec cypress/integration/firstTestCase.js",
+    "multipleTests":"npm run common -- --spec cypress/integration/fixturesTest.js,cypress/integration/fixturesTest2.js",
+    "parallelTests":"npm run testCommand -- --spec cypress/integration/fixturesTest.js,cypress/integration/fixturesTest2.js --record --key 71c256ba-b5cf-4f59-a8ae-fb4a705be76a --parallel"
   },
   "author": "Aniruddha Parlikar",
   "license": "ISC"
