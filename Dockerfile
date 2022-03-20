@@ -1,11 +1,13 @@
 FROM cypress/included:9.1.1
-RUN mkdir /my-cypress-project
+RUN mkdir my-cypress-project
+# RUN mkdir /my-cypress-project
 # There can be number of RUN and COPY commands in a docker file
 # RUN Command always runs when a container is executed.
 WORKDIR /my-cypress-project
 
 # In COPY Command, the first '.' means current directory and second '.'means working directory
-COPY ./Jenkinsfile .
+# COPY ./Jenkinsfile .
+COPY ["./Jenkinsfile","."]
 COPY ./cypress.json .
 COPY ./package.json .
 COPY ./package-lock.json .
